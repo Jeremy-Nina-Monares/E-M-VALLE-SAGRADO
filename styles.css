@@ -173,7 +173,7 @@ header .container {
 }
 
 .logo img {
-    height: 50px;
+    height: 125px;
     margin-right: 10px;
 }
 
@@ -236,7 +236,7 @@ nav ul li a:hover::after {
     height: 100vh;
     min-height: 600px;
     position: relative;
-    background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+    background: url('assets/img/fondo.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     color: #fff;
