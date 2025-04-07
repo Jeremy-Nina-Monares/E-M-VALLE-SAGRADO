@@ -968,28 +968,31 @@ footer {
 }
 
 @media (max-width: 576px) {
-    .hero-content h1 {
-        font-size: 2rem;
+    .contact {
+        padding: 30px 0;
     }
-    
-    .stats {
+
+    .contact-wrapper {
+        gap: 20px;
+    }
+
+    .contact-card {
         flex-direction: column;
+        text-align: center;
+        padding: 10px;
     }
-    
-    .stat {
-        margin-bottom: 20px;
+
+    .contact-card i {
+        margin-right: 10;
+        margin-bottom: 10px;
+        font-size: 1.8rem;
     }
-    
-    .property-footer {
-        flex-direction: column;
-        align-items: flex-start;
+
+    .contact-form {
+        padding: 20px 15px;
     }
-    
-    .property-price {
+
+    .form-group {
         margin-bottom: 10px;
     }
-    
-    .footer-bottom {
-        text-align: center;
-    }
-} 
+}
