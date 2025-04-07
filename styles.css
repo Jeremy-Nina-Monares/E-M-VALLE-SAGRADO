@@ -885,111 +885,81 @@ footer {
         order: 2;
     }
 }
-
+/* Mejoras para la sección de contacto en móviles */
 @media (max-width: 768px) {
-    header {
-        padding: 15px 0;
-    }
-    
-    .menu-toggle {
-        display: block;
-    }
-    
-    nav {
-        position: fixed;
-        top: 80px;
-        left: -100%;
-        width: 80%;
-        height: calc(100vh - 80px);
-        background-color: #fff;
-        padding: 50px 30px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: var(--transition);
-    }
-    
-    nav.active {
-        left: 0;
-    }
-    
-    nav ul {
-        flex-direction: column;
-    }
-    
-    nav ul li {
-        margin: 15px 0;
-    }
-    
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero-content p {
-        font-size: 1.1rem;
-    }
-    
-    .section-header h2 {
-        font-size: 2rem;
-    }
-    
-    .services-grid,
-    .properties-grid {
+    .contact-wrapper {
         grid-template-columns: 1fr;
+        gap: 30px;
     }
-    
+
     .contact-info {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
-    
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    
-    .footer-logo,
-    .footer-links,
-    .footer-services,
-    .footer-newsletter {
-        margin-bottom: 30px;
-    }
-    
-    .newsletter-form {
-        max-width: 400px;
-        margin: 0 auto;
-    }
-    
-    .footer-bottom {
+
+    .contact-card {
+        display: flex;
         flex-direction: column;
-        text-align: center;
+        align-items: center;
+        padding: 20px;
     }
-    
-    .footer-social {
-        margin-top: 15px;
+
+    .contact-form {
+        padding: 30px 20px;
+    }
+
+    .social-links {
+        grid-column: span 1;
+        margin-top: 20px;
+    }
+
+    .social-link {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
     }
 }
 
 @media (max-width: 576px) {
-    .hero-content h1 {
-        font-size: 2rem;
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
-    
-    .stats {
-        flex-direction: column;
+
+    .contact-info {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
-    
-    .stat {
-        margin-bottom: 20px;
+
+    .contact-card {
+        padding: 15px;
     }
-    
-    .property-footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .property-price {
+
+    .contact-card i {
+        font-size: 1.8rem;
         margin-bottom: 10px;
     }
-    
-    .footer-bottom {
-        text-align: center;
+
+    .contact-card h3 {
+        font-size: 1rem;
+        margin-bottom: 5px;
     }
-} 
+
+    .contact-card p {
+        font-size: 0.9rem;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+    }
+}
