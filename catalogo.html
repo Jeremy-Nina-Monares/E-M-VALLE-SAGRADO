@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Propiedades - Inmobiliaria E&M Valle Sagrado</title>
+    <meta name="description" content="Explora nuestro catálogo completo de propiedades en Valle Sagrado y Cusco. Casas, terrenos y locales comerciales para compra y venta.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="catalogo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.png" alt="Inmobiliaria E&M Valle Sagrado">
+                <h1>E&M Valle Sagrado</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#nosotros">Nosotros</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="index.html#propiedades">Propiedades</a></li>
+                    <li><a href="index.html#contacto" class="btn-contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>Catálogo de Propiedades</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> / Catálogo
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="property-type">Tipo de Propiedad</label>
+                    <select id="property-type">
+                        <option value="all">Todos</option>
+                        <option value="terrenos">Terrenos</option>
+                        <option value="casas">Casas</option>
+                        <option value="comerciales">Locales Comerciales</option>
+                        <option value="hoteles">Hoteles</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="location">Ubicación</label>
+                    <select id="location">
+                        <option value="all">Todas</option>
+                        <option value="cusco">Cusco</option>
+                        <option value="urubamba">Urubamba</option>
+                        <option value="pisac">Pisac</option>
+                        <option value="calca">Calca</option>
+                        <option value="ollantaytambo">Ollantaytambo</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-range">Rango de Precio</label>
+                    <select id="price-range">
+                        <option value="all">Todos</option>
+                        <option value="0-50000">$0 - $50,000</option>
+                        <option value="50000-100000">$50,000 - $100,000</option>
+                        <option value="100000-200000">$100,000 - $200,000</option>
+                        <option value="200000-500000">$200,000 - $500,000</option>
+                        <option value="500000+">$500,000+</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary filter-button">Filtrar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog-section">
+        <div class="container">
+            <div class="catalog-header">
+                <h2>Nuestras Propiedades</h2>
+                <div class="catalog-sort">
+                    <label for="sort-by">Ordenar por:</label>
+                    <select id="sort-by">
+                        <option value="newest">Más recientes</option>
+                        <option value="price-low">Precio: menor a mayor</option>
+                        <option value="price-high">Precio: mayor a menor</option>
+                        <option value="size">Tamaño</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="catalog-grid">
+                <!-- Property 1 -->
+                <div class="catalog-property" data-type="terrenos" data-location="urubamba" data-price="75000">
+                    <div class="property-image">
+                        <img src="assets/terreno1.jpg" alt="Terreno en Urubamba">
+                        <div class="property-tag">Terreno</div>
+                        <div class="property-save"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Terreno en Urubamba</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Urubamba, Valle Sagrado</p>
+                        <p class="property-description">Hermoso terreno de 1000m² con vista panorámica al Valle Sagrado, ideal para casa de campo o proyecto turístico.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-ruler-combined"></i> 1000m²</span>
+                            <span><i class="fas fa-mountain"></i> Vista panorámica</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">$75,000</div>
+                            <a href="https://wa.me/51999888777?text=Estoy%20interesado%20en%20el%20terreno%20en%20Urubamba" class="btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 2 -->
+                <div class="catalog-property" data-type="casas" data-location="pisac" data-price="120000">
+                    <div class="property-image">
+                        <img src="assets/casa1.jpg" alt="Casa en Pisac">
+                        <div class="property-tag">Casa</div>
+                        <div class="property-save"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Casa en Pisac</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Pisac, Valle Sagrado</p>
+                        <p class="property-description">Hermosa casa de 3 dormitorios con jardín amplio y vista a las montañas, a 5 minutos del centro de Pisac.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 3 Hab.</span>
+                            <span><i class="fas fa-bath"></i> 2 Baños</span>
+                            <span><i class="fas fa-ruler-combined"></i> 180m²</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">$120,000</div>
+                            <a href="https://wa.me/51999888777?text=Estoy%20interesado%20en%20la%20casa%20en%20Pisac" class="btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 3 -->
+                <div class="catalog-property" data-type="comerciales" data-location="cusco" data-price="150000">
+                    <div class="property-image">
+                        <img src="assets/local1.jpg" alt="Local Comercial en Cusco">
+                        <div class="property-tag">Comercial</div>
+                        <div class="property-save"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Local Comercial en Cusco</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Centro Histórico, Cusco</p>
+                        <p class="property-description">Amplio local comercial ubicado en zona turística del centro histórico de Cusco, ideal para restaurante o tienda.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-ruler-combined"></i> 120m²</span>
+                            <span><i class="fas fa-door-open"></i> 2 Ingresos</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">$150,000</div>
+                            <a href="https://wa.me/51999888777?text=Estoy%20interesado%20en%20el%20local%20comercial%20en%20Cusco" class="btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 4 -->
+                <div class="catalog-property" data-type="terrenos" data-location="calca" data-price="60000">
+                    <div class="property-image">
+                        <img src="assets/terreno2.jpg" alt="Terreno en Calca">
+                        <div class="property-tag">Terreno</div>
+                        <div class="property-save"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Terreno en Calca</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Calca, Valle Sagrado</p>
+                        <p class="property-description">Terreno de 800m² con acceso directo a carretera, servicios básicos y certificado de posesión.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-ruler-combined"></i> 800m²</span>
+                            <span><i class="fas fa-road"></i> Acceso carretera</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">$60,000</div>
+                            <a href="https://wa.me/51999888777?text=Estoy%20interesado%20en%20el%20terreno%20en%20Calca" class="btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 5 -->
+                <div class="catalog-property" data-type="casas" data-location="ollantaytambo" data-price="195000">
+                    <div class="property-image">
+                        <img src="assets/casa2.jpg" alt="Casa en Ollantaytambo">
+                        <div class="property-tag">Casa</div>
+                        <div class="property-save"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Casa en Ollantaytambo</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Ollantaytambo, Valle Sagrado</p>
+                        <p class="property-description">Casa estilo colonial con 4 habitaciones, patio central y acabados en piedra y madera, perfecta para negocio turístico.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 4 Hab.</span>
+                            <span><i class="fas fa-bath"></i> 3 Baños</span>
+                            <span><i class="fas fa-ruler-combined"></i> 220m²</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">$195,000</div>
+                            <a href="https://wa.me/51999888777?text=Estoy%20interesado%20en%20la%20casa%20en%20Ollantaytambo" class="btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 6 -->
+                <div class="catalog-property" data-type="hoteles" data-location="pisac" data-price="280000">
+                    <div class="property-image">
+                        <img src="assets/hotel1.jpg" alt="Hotel en Pisac">
+                        <div class="property-tag">Hotel</div>
+                        <div class="property-save"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Hotel en Pisac</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Pisac, Valle Sagrado</p>
+                        <p class="property-description">Pequeño hotel con 8 habitaciones, restaurante y jardín, negocio en funcionamiento con clientela establecida.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 8 Hab.</span>
+                            <span><i class="fas fa-utensils"></i> Restaurante</span>
+                            <span><i class="fas fa-ruler-combined"></i> 450m²</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">$280,000</div>
+                            <a href="https://wa.me/51999888777?text=Estoy%20interesado%20en%20el%20hotel%20en%20Pisac" class="btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 7 -->
+                <div class="catalog-property" data-type="terrenos" data-location="urubamba" data-price="95000">
+                    <div class="property-image">
+                        <img src="assets/terreno3.jpg" alt="Terreno en Urubamba">
+                        <div class="property-tag">Terreno</div>
+                        <div class="property-save"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Terreno en Urubamba</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Urubamba, Valle Sagrado</p>
+                        <p class="property-description">Terreno de 1500m² con agua, luz y vista al río Urubamba. Excelente ubicación para proyecto hotelero.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-ruler-combined"></i> 1500m²</span>
+                            <span><i class="fas fa-water"></i> Vista al río</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">$95,000</div>
+                            <a href="https://wa.me/51999888777?text=Estoy%20interesado%20en%20el%20terreno%20en%20Urubamba%20con%20vista%20al%20río" class="btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property A8 -->
+                <div class="catalog-property" data-type="casas" data-location="cusco" data-price="230000">
+                    <div class="property-image">
+                        <img src="assets/casa3.jpg" alt="Casa en Cusco">
+                        <div class="property-tag">Casa</div>
+                        <div class="property-save"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Casa en Cusco</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> San Blas, Cusco</p>
+                        <p class="property-description">Casa de 3 niveles ubicada en el tradicional barrio de San Blas, ideal para vivienda o negocio turístico.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-bed"></i> 5 Hab.</span>
+                            <span><i class="fas fa-bath"></i> 3 Baños</span>
+                            <span><i class="fas fa-ruler-combined"></i> 280m²</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">$230,000</div>
+                            <a href="https://wa.me/51999888777?text=Estoy%20interesado%20en%20la%20casa%20en%20San%20Blas%2C%20Cusco" class="btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Property 9 -->
+                <div class="catalog-property" data-type="comerciales" data-location="pisac" data-price="85000">
+                    <div class="property-image">
+                        <img src="assets/local2.jpg" alt="Local Comercial en Pisac">
+                        <div class="property-tag">Comercial</div>
+                        <div class="property-save"><i class="far fa-heart"></i></div>
+                    </div>
+                    <div class="property-details">
+                        <h3>Local Comercial en Pisac</h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> Centro de Pisac</p>
+                        <p class="property-description">Local comercial ubicado frente al mercado artesanal de Pisac, excelente ubicación para negocio turístico.</p>
+                        <div class="property-features">
+                            <span><i class="fas fa-ruler-combined"></i> 75m²</span>
+                            <span><i class="fas fa-store"></i> Frente a mercado</span>
+                        </div>
+                        <div class="property-footer">
+                            <div class="property-price">$85,000</div>
+                            <a href="https://wa.me/51999888777?text=Estoy%20interesado%20en%20el%20local%20comercial%20en%20Pisac" class="btn-whatsapp">
+                                <i class="fab fa-whatsapp"></i> Consultar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="next">Siguiente <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿No encuentras lo que buscas?</h2>
+                <p>Contáctanos directamente y te ayudaremos a encontrar la propiedad ideal según tus requerimientos.</p>
+                <a href="https://wa.me/51999888777?text=Hola%2C%20estoy%20buscando%20una%20propiedad%20con%20características%20específicas" class="btn btn-light">Contactar por WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/logo.png" alt="Inmobiliaria E&M Valle Sagrado">
+                    <h2>E&M Valle Sagrado</h2>
+                    <p>Tu mejor opción inmobiliaria en Cusco y el Valle Sagrado de los Incas.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html#inicio">Inicio</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="index.html#servicios">Servicios</a></li>
+                        <li><a href="index.html#propiedades">Propiedades</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li>Compra y Venta</li>
+                        <li>Terrenos en Valle Sagrado</li>
+                        <li>Propiedades Urbanas</li>
+                        <li>Asesoría Legal</li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Suscríbete</h3>
+                    <p>Recibe nuestras mejores ofertas y novedades inmobiliarias</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit" class="btn-subscribe">Suscribir</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 E&M Valle Sagrado. Todos los derechos reservados.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="catalogo.js"></script>
+</body>
+</html>
