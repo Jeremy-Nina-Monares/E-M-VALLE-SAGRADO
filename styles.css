@@ -897,7 +897,7 @@ footer {
     
     nav {
         position: fixed;
-        top: 80px;
+        top: 15px;
         left: -100%;
         width: 80%;
         height: calc(100vh - 80px);
@@ -940,6 +940,39 @@ footer {
         grid-template-columns: 1fr;
     }
     
+    /* Asegurar tamaño uniforme para contact cards */
+    .contact-info {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%; /* Asegurar altura consistente */
+        min-height: 120px; /* Altura mínima para uniformidad */
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Ajuste para que los iconos y texto estén centrados */
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-card i {
+        margin-bottom: 10px;
+        margin-right: 0;
+        font-size: 2rem;
+    }
+
+    .contact-card .contact-details {
+        text-align: center;
+    }
+
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -968,28 +1001,16 @@ footer {
 }
 
 @media (max-width: 576px) {
-    .hero-content h1 {
-        font-size: 2rem;
+    nav {
+        padding: 80px 20px 30px;
     }
-    
-    .stats {
-        flex-direction: column;
+
+    .contact-card {
+        min-height: 100px;
+        padding: 15px;
     }
-    
-    .stat {
-        margin-bottom: 20px;
+
+    .contact-card i {
+        font-size: 1.8rem;
     }
-    
-    .property-footer {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .property-price {
-        margin-bottom: 10px;
-    }
-    
-    .footer-bottom {
-        text-align: center;
-    }
-} 
+}
