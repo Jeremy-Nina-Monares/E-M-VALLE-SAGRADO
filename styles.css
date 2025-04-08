@@ -173,7 +173,7 @@ header .container {
 }
 
 .logo img {
-    height: 125px;
+    height: 100px;
     margin-right: 10px;
 }
 
@@ -968,31 +968,28 @@ footer {
 }
 
 @media (max-width: 576px) {
-    .contact {
-        padding: 30px 0;
+    .hero-content h1 {
+        font-size: 2rem;
     }
-
-    .contact-wrapper {
-        gap: 20px;
-    }
-
-    .contact-card {
+    
+    .stats {
         flex-direction: column;
+    }
+    
+    .stat {
+        margin-bottom: 20px;
+    }
+    
+    .property-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .property-price {
+        margin-bottom: 10px;
+    }
+    
+    .footer-bottom {
         text-align: center;
-        padding: 10px;
     }
-
-    .contact-card i {
-        margin-right: 10;
-        margin-bottom: 10px;
-        font-size: 1.8rem;
-    }
-
-    .contact-form {
-        padding: 20px 15px;
-    }
-
-    .form-group {
-        margin-bottom: 10px;
-    }
-}
+} 
